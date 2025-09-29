@@ -220,6 +220,11 @@ bool pg_jsonapi::QueryBuilder::ParseRequestArguments (const char* a_method, size
         return false;
     }
 
+    if (a_url_len > 26000) {
+        AddError(JSONAPI_MAKE_SQLSTATE("JA021"), E_HTTP_BAD_REQUEST).SetMessage(NULL, "Request with too many characters");
+        return false;
+    }
+
     rq_url_encoded_ = std::string(a_url, 0, a_url_len);
     if ( ! ParseUrl() ) {
         return false;
