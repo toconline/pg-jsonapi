@@ -50,7 +50,7 @@ namespace pg_jsonapi {
         ,{ "JA018", E_HTTP_INTERNAL_SERVER_ERROR, "Erro de sistema JA018: pedido inválido. Por favor contacte o suporte técnico." }             // unsupported request detected when serializing response
         ,{ "JA019", E_HTTP_BAD_REQUEST,           "Erro de sistema JA019: demasiados resultados na resposta de topo. Por favor utilize menos items por página." }       // too many resources on top level
         ,{ "JA020", E_HTTP_BAD_REQUEST,           "Erro de sistema JA020: demasiados resultados nas relações a incluir. Por favor utilize menos items por página." }    // too many items on resource to be included
-
+        ,{ "JA021", E_HTTP_BAD_REQUEST,           "Erro de sistema JA021: pedido demasiado grande. Por favor utilize menos items." }
         // XssAttack to be used on xss_validators // validators_setting_[E_DB_CONFIG_XSS]
         ,{ "JA101", E_HTTP_BAD_REQUEST,           "Texto inválido num dos campos." }                                                            // invalid request XssAttack
         // SQL read injection to be used on sql_validators // validators_setting_ E_DB_CONFIG_SQL_WHITELIST / E_DB_CONFIG_SQL_BLACKLIST
